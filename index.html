@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Chamber</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <h2 id="page_heading">Generate Bill</h2>
+
+    <div id="bill_item_container">
+        <button class="active-btn" data-target="#opinion_form">Opinion Bill</button>
+        <button data-target="#satisfaction_form">Satisfaction Bill</button>
+        <button data-target="#mortgage_form">Mortgage Bill</button>
+    </div>
+
+    <div id="bill_form_container">
+       <!-- opinion_form -->
+        <form data-form id="opinion_form"  class="active-form bill-form" action="./b.html">
+        <h3>Opinion Bill Form</h3>
+            <main>
+                  
+                <div>
+                    <label>Date:</label>
+                    <input type="date" name="date">
+                </div>
+                <div>
+                    <label>Ref: </label>
+                    <input type="text" placeholder="PBL/Reazuddin Bazar/2026/5153"  name="ref">
+                </div>
+                <div>
+                    <label>Bank Name:</label>
+                    <!-- <input type="text" placeholder="Bank Name" name="bank"> -->
+                    <select name="bank" id="" form="">
+                        <option selected value="Pubali Bank PLC">Pubali Bank PLC</option>
+                        <option value="NCC Bank">NCC Bank</option>
+                        <option value="Sonali Bank">Sonali Bank</option>
+                        <option value="Islami Bank">Islami Bank</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Branch Name:</label>
+                    <!-- <input type="text" placeholder="Branch Name" name="branch"> -->
+                     <select name="branch" id="" form="">
+                        <option selected value="CDA Branch">CDA Branch</option>
+                        <option value="Chawkbazar Branch">Chawkbazar Branch</option>
+                        <option value="Bahadderhat Branch">Bahadderhat Branch</option>
+                        <option value="Mehedibag Branch">Mehedibag Branch</option>
+                    </select>
+                </div>
+                <div>
+                    <label>A/C Name:</label>
+                    <input type="text" placeholder="Sifat Ullah"  name="acc_name">
+                </div>
+                <!-- <div>
+                    <labelfor="amount">Amount:</label>
+                    <input type="number"  name="amount">
+                </div> -->
+
+                </main>   
+                    <h3 style="text-align: center;color:#1ccc7b;margin-top: 20px">Services</h3>
+                    <table id="mortgage_form_table" style="width: 100%; margin-top:6px;">
+                        <thead>
+                            <tr>
+                                <th>SL</th>
+                                <th>Description</th>
+                                <th style="width: 15%">Amount(Taka)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>1</td>
+                                <td><input name="opinion_title" type="text" value="Opinion Bill"></td>
+                                <td><input name="opinion_amount" type="number" value="5000"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                        </tbody>
+                        <tr id="total_amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">In Word: Five thousand taka only</td>
+                            <td style="border-right: none;"><input name="total_amount" type="number" value="50"></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                    </table>
+                   
+                        <button id="add_row">
+                            Add Row
+                        </button>
+                    
+                <input style="margin-top: 20px" type="submit" value="Submit">
+            
+        </form>
+        <!-- satisfaction_form -->
+        <form data-form id="satisfaction_form"  class="bill-form" action="./b.html">
+        <h3>Satisfaction Bill Form</h3>
+            <main>
+                  
+                <div>
+                    <label>Date:</label>
+                    <input type="date" name="date">
+                </div>
+                <div>
+                    <label>Ref: </label>
+                    <input type="text" placeholder="PBL/Reazuddin Bazar/2026/5153"  name="ref">
+                </div>
+                <div>
+                    <label>Bank Name:</label>
+                    <!-- <input type="text" placeholder="Bank Name" name="bank"> -->
+                    <select name="bank" id="" form="">
+                        <option selected value="Pubali Bank PLC">Pubali Bank PLC</option>
+                        <option value="NCC Bank">NCC Bank</option>
+                        <option value="Sonali Bank">Sonali Bank</option>
+                        <option value="Islami Bank">Islami Bank</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Branch Name:</label>
+                    <!-- <input type="text" placeholder="Branch Name" name="branch"> -->
+                     <select name="branch" id="" form="">
+                        <option selected value="CDA Branch">CDA Branch</option>
+                        <option value="Chawkbazar Branch">Chawkbazar Branch</option>
+                        <option value="Bahadderhat Branch">Bahadderhat Branch</option>
+                        <option value="Mehedibag Branch">Mehedibag Branch</option>
+                    </select>
+                </div>
+                <div>
+                    <label>A/C Name:</label>
+                    <input type="text" placeholder="Sifat Ullah"  name="acc_name">
+                </div>
+                <!-- <div>
+                    <labelfor="amount">Amount:</label>
+                    <input type="number"  name="amount">
+                </div> -->
+
+                </main>   
+                    <h3 style="text-align: center;color:#1ccc7b;margin-top: 20px">Services</h3>
+                    <table id="mortgage_form_table" style="width: 100%; margin-top:6px;">
+                        <thead>
+                            <tr>
+                                <th>SL</th>
+                                <th>Description</th>
+                                <th style="width: 15%">Amount(Taka)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>1</td>
+                                <td><input name="satisfaction_title" type="text" value="Satisfaction"></td>
+                                <td><input name="satisfaction_amount" type="number" value="500"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input name="n_fee_title" type="text" value="Deed of Agreement"></td>
+                                <td><input name="deed_agree_amount" type="number" value="2000"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                        </tbody>
+                        <tr id="total_amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">In Word:Two thousand Five Hundred taka only</td>
+                            <td style="border-right: none;"><input name="total_amount" type="number" value="25"></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                    </table>
+                   
+                        <button id="add_row">
+                            Add Row
+                        </button>
+                    
+                <input style="margin-top: 20px" type="submit" value="Submit">
+            
+        </form>
+        <!-- mortgage_form -->
+        <form data-form id="mortgage_form"  class="bill-form" action="./b.html">
+ <h3>Mortgage Bill Form</h3>
+            <main>
+                  
+                <div>
+                    <label>Date:</label>
+                    <input type="date" name="date">
+                </div>
+                <div>
+                    <label>Ref: </label>
+                    <input type="text" placeholder="PBL/Reazuddin Bazar/2026/5153"  name="ref">
+                </div>
+                <div>
+                    <label>Bank Name:</label>
+                    <!-- <input type="text" placeholder="Bank Name" name="bank"> -->
+                    <select name="bank" id="" form="">
+                        <option selected value="Pubali Bank PLC">Pubali Bank PLC</option>
+                        <option value="NCC Bank">NCC Bank</option>
+                        <option value="Sonali Bank">Sonali Bank</option>
+                        <option value="Islami Bank">Islami Bank</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Branch Name:</label>
+                    <!-- <input type="text" placeholder="Branch Name" name="branch"> -->
+                     <select name="branch" id="" form="">
+                        <option selected value="CDA Branch">CDA Branch</option>
+                        <option value="Chawkbazar Branch">Chawkbazar Branch</option>
+                        <option value="Bahadderhat Branch">Bahadderhat Branch</option>
+                        <option value="Mehedibag Branch">Mehedibag Branch</option>
+                    </select>
+                </div>
+                <div>
+                    <label>A/C Name:</label>
+                    <input type="text" placeholder="Sifat Ullah"  name="acc_name">
+                </div>
+                <!-- <div>
+                    <labelfor="amount">Amount:</label>
+                    <input type="number"  name="amount">
+                </div> -->
+
+                </main>   
+                    <h3 style="text-align: center;color:#1ccc7b;margin-top: 20px">Services</h3>
+                    <table id="mortgage_form_table" style="width: 100%; margin-top:6px;">
+                        <thead>
+                            <tr>
+                                <th>SL</th>
+                                <th>Description</th>
+                                <th style="width: 15%">Amount(Taka)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>1</td>
+                                <td><input name="payorder_title" type="text" value="Pay Order"></td>
+                                <td><input name="pay_order_amount" type="number" value="10500"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input name="n_fee_title" type="text" value="N-Fee & E-Fee"></td>
+                                <td><input name="n_fee_amount" type="number" value="1500"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input name="certified_copy_title" type="text" value="Certified Copy"></td>
+                                <td><input name="certified_copy_amount" type="number" value="2000"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><input name="stamp_utility_title" type="text" value="Stamps, Cartridges Computer Print & Other Expenses"></td>
+                                <td><input name="stamp_utility_amount" type="number" value="2500"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><input name="sro_title" type="text" value="SRO Miscellaneous"></td>
+                                <td><input name="sro_amount" type="number" value="6000"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><input name="mortgage_title" type="text" value="Drafting of Mortgage"></td>
+                                <td><input name="mortgage_amount" type="number" value="7000"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><input name="affidavit_title" type="text" value="Affidavit with Notary"></td>
+                                <td><input name="affidavit_amount" type="number" value="2500"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><input name="undertaking_title" type="text" value="Undertaking"></td>
+                                <td><input name="undertaking_amount" type="number" value="2000"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><input name="encumbrance_title" type="text" value="Certificate of Encumbrance"></td>
+                                <td><input name="encumbrance_amount" type="number" value="1000"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><input name="satisfaction_title" type="text" value="Satisfaction Certificate"></td>
+                                <td><input name="satisfaction_amount" type="number" value="1000"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                            
+                        </tbody>
+                        <tr id="total_amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">In Word: thousand taka only</td>
+                            <td style="border-right: none;"><input name="total_amount" type="number" value="5000"></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                    </table>
+                   
+                        <button id="add_row">
+                            Add Row
+                        </button>
+                    
+                <input style="margin-top: 20px" type="submit" value="Submit">
+            
+        </form>
+    </div>
+
+
+    <!-- Bill format Modals  -->
+    <!-- Opinion Modal -->
+<!-- <div id="opinion_modal" class="modal">
+
+  <div class="modal-body opinion-modal">
+    <span class="close">&times;</span><br>
+   <h1>Opinion form</h1>
+  
+  </div>
+
+</div> -->
+
+
+
+
+
+
+
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>

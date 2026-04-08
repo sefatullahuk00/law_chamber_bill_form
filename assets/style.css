@@ -1,0 +1,196 @@
+/* google font  */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* color: #1ccc7b; #dc3545 */
+    /* font-family: serif, sans-serif; */
+     font-family: "Roboto", sans-serif;
+}
+
+#page_heading {
+    text-align: center;
+    font-weight: 800;
+    color: black;
+    margin: 1rem;
+    font-size: 34px;
+    color: #1ccc7b;
+}
+
+#bill_item_container {
+    display: flex;
+    justify-content: center;
+    background-color: #dedede;
+}
+#bill_item_container button{
+    padding: 7px 15px;
+    background-color: #1ccc7b;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    border:none;
+    border-right: 1px solid black;
+    cursor: pointer;
+}
+
+#bill_item_container button:nth-child(3) {
+    border-right: none;
+}
+
+.active-btn {
+    background-color: #282f6e !important;
+}
+
+#bill_item_container button:hover{
+    background-color: #282f6e;
+    transition: .3s ease-in
+}
+
+/* Opinion bill  */
+#bill_form_container {
+    max-width: 1050px;
+    margin: 0px auto;
+    padding-top: 20px;
+}
+
+#bill_form_container .bill-form {
+    width: 75%;
+    margin: auto;
+    padding: 15px;
+    box-shadow: 0 4px 8px 0 rgba(158, 240, 185, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+    border: 1px solid #1ccc7b;
+    border-radius: 7px;
+}
+
+.active-form {
+    display: block !important;
+}
+
+#bill_form_container .bill-form main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 7px 14px;
+}
+
+#bill_form_container .bill-form main div {
+    padding-bottom: 0px !important; 
+    flex-basis: 300px;
+    flex-grow: 1;
+}
+
+#bill_form_container .bill-form table, .bill-form th,.bill-form td{
+    border: 1px solid #c5e9d8;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 20px;
+    padding: 4px;
+}
+
+#bill_form_container .bill-form table tbody tr:nth-child(odd),
+.bill-form table tbody tr:nth-child(odd) input {
+    background-color: #e7f9f6
+}
+
+#bill_form_container .bill-form table input {
+    font-size: 18px;
+    width: 100%;
+    margin: auto;
+    display: block;
+    outline: none;
+    border: none;
+    padding: 0 5px
+}
+
+#bill_form_container .bill-form table input:focus {
+    outline: #1ccc7b;
+}
+
+#bill_form_container .bill-form table button {
+    background: #1ccc7b;
+    color: white;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#bill_form_container .bill-form table #total_amount td:nth-child(2) {
+    font-weight: bold;
+}
+#bill_form_container .bill-form table #total_amount td:nth-child(3) input {
+    font-weight: bold;
+}
+#bill_form_container .bill-form #add_row {
+    background-color: #f1f1f1;
+    margin-top: 10px;
+    padding: 3px 5px;
+    border: 1px solid #1ccc7b;
+    cursor: pointer;
+    font-size: 17px;
+    color: #1ccc7b;
+    border-radius: 4px;
+}
+
+#bill_form_container .bill-form #add_row:hover {
+    background-color: #1ccc7b;
+    color: #ddd;
+    transition: .3s ease-in-out; 
+}
+
+#bill_form_container .bill-form div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-bottom: 20px;
+}
+
+#bill_form_container .bill-form h3 {
+    color: #1ccc7b;
+    font-size: 24px;
+    padding: 8px 0;
+}
+
+#bill_form_container .bill-form div label {
+    font-size: 18px;
+    color: #6a6868;
+    font-weight: 550;
+}
+
+#bill_form_container .bill-form div input,
+#bill_form_container .bill-form div select  {
+    color: #727272;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 6px 4px;
+    border: 1px solid #c5e9d8;
+    border-radius: 4px;
+}
+
+#bill_form_container .bill-form div input:focus {
+    border: 1px solid #3bc2a5;
+    outline: none;
+    padding-bottom: 13px;
+    transition: .5s ease
+}
+
+#bill_form_container .bill-form input[type='submit'] {
+    background-color: #1ccc7b;
+    border: none;
+    font-size: 22px;
+    width: 100%;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 0;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+#bill_form_container .bill-form input[type='submit']:hover {
+    background-color: #179259;
+    transition: .3s ease-in
+}
