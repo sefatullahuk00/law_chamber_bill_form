@@ -177,7 +177,9 @@
     padding-bottom: 13px;
     transition: .5s ease
 }
-
+#bill_form_container .bill-form div select:focus {
+    outline: none;
+}
 #bill_form_container .bill-form input[type='submit'] {
     background-color: #1ccc7b;
     border: none;
