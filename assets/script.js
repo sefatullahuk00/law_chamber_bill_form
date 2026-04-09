@@ -95,3 +95,26 @@ const addRowBtn = document.querySelectorAll('.bill-form #add_row');     // Add r
             }
         })
     })
+
+    // CONFIRMATION OF FORM SUBMIT
+    billForms.forEach( form => {
+        form.addEventListener('submit', (e) => {
+            const modal = document.getElementById("confirmModal");
+            const confirmYes = document.getElementById("confirmYes");
+            const confirmNo = document.getElementById("confirmNo");
+
+            e.preventDefault(); // Stop immediate submission
+            modal.classList.add("show"); // Show modal
+
+            confirmYes.addEventListener("click", function() {
+                modal.classList.remove("show");
+                form.submit(); // Proceed with submission
+            });
+
+            confirmNo.addEventListener("click", function() {
+                modal.classList.remove("show");// Close modal, do nothing
+                // modal.style.transition = "1s ease"
+            });
+        })
+    })
+   
