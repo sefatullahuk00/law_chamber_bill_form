@@ -10,90 +10,15 @@
     <h2 id="page_heading">Generate Bill</h2>
 
     <div id="bill_item_container">
-        <button class="active-btn" data-target="#opinion_form">Opinion Bill</button>
-        <button data-target="#satisfaction_form">Satisfaction Bill</button>
+        <button class="active-btn" data-target="#general_form">General Bill</button>
+        <button data-target="#opinion_form">Opinion Bill</button>
         <button data-target="#mortgage_form">Mortgage Bill</button>
     </div>
 
     <div id="bill_form_container">
-       <!-- opinion_form -->
-        <form data-form id="opinion_form"  class="active-form bill-form" action="./b.html">
-        <h3>Opinion Bill Form</h3>
-            <main>
-                  
-                <div>
-                    <label>Date:</label>
-                    <input type="date" name="date">
-                </div>
-                <div>
-                    <label>Ref: </label>
-                    <input type="text" placeholder="PBL/Reazuddin Bazar/2026/5153"  name="ref">
-                </div>
-                <div>
-                    <label>Bank Name:</label>
-                    <!-- <input type="text" placeholder="Bank Name" name="bank"> -->
-                    <select name="bank" id="" form="">
-                        <option selected value="Pubali Bank PLC">Pubali Bank PLC</option>
-                        <option value="NCC Bank">NCC Bank</option>
-                        <option value="Sonali Bank">Sonali Bank</option>
-                        <option value="Islami Bank">Islami Bank</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Branch Name:</label>
-                    <!-- <input type="text" placeholder="Branch Name" name="branch"> -->
-                     <select name="branch" id="" form="">
-                        <option selected value="CDA Branch">CDA Branch</option>
-                        <option value="Chawkbazar Branch">Chawkbazar Branch</option>
-                        <option value="Bahadderhat Branch">Bahadderhat Branch</option>
-                        <option value="Mehedibag Branch">Mehedibag Branch</option>
-                    </select>
-                </div>
-                <div>
-                    <label>A/C Name:</label>
-                    <input type="text" placeholder="Sifat Ullah"  name="acc_name">
-                </div>
-                <!-- <div>
-                    <labelfor="amount">Amount:</label>
-                    <input type="number"  name="amount">
-                </div> -->
 
-                </main>   
-                    <h3 style="text-align: center;color:#1ccc7b;margin-top: 20px">Services</h3>
-                    <table id="mortgage_form_table" style="width: 100%; margin-top:6px;">
-                        <thead>
-                            <tr>
-                                <th>SL</th>
-                                <th>Description</th>
-                                <th style="width: 15%">Amount(Taka)</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody class="tbody">
-                            <tr>
-                                <td>1</td>
-                                <td><input name="opinion_title" type="text" value="Opinion Bill"></td>
-                                <td><input name="opinion_amount" type="number" value="5000"></td>
-                                <td><button>Delete</button></td>
-                            </tr>
-                        </tbody>
-                        <tr id="total_amount">
-                            <td style="border-right: none;"></td>
-                            <td style="border-left: none;">In Word: Five thousand taka only</td>
-                            <td style="border-right: none;"><input name="total_amount" type="number" value="50"></td>
-                            <td style="border-left: none;"></td>
-                        </tr>
-                    </table>
-                   
-                        <button id="add_row">
-                            Add Row
-                        </button>
-                    
-                <input style="margin-top: 20px" type="submit" value="Submit">
-            
-        </form>
-        <!-- satisfaction_form -->
-        <form data-form id="satisfaction_form"  class="bill-form" action="./b.html">
+        <!-- general form -->
+        <form data-form id="general_form"  class="active-form   bill-form" action="./b.html">
         <h3>Satisfaction Bill Form</h3>
             <main>
                   
@@ -136,7 +61,7 @@
 
                 </main>   
                     <h3 style="text-align: center;color:#1ccc7b;margin-top: 20px">Services</h3>
-                    <table id="mortgage_form_table" style="width: 100%; margin-top:6px;">
+                    <table id="general_form_table" style="width: 100%; margin-top:6px;">
                         <thead>
                             <tr>
                                 <th>SL</th>
@@ -148,8 +73,8 @@
                         <tbody class="tbody">
                             <tr>
                                 <td>1</td>
-                                <td><input name="satisfaction_title" type="text" value="Satisfaction"></td>
-                                <td><input name="satisfaction_amount" type="number" value="500"></td>
+                                <td><input name="general_title" type="text" value="Satisfaction"></td>
+                                <td><input name="general_amount" type="number" value="500"></td>
                                 <td><button>Delete</button></td>
                             </tr>
                             <tr>
@@ -159,10 +84,114 @@
                                 <td><button>Delete</button></td>
                             </tr>
                         </tbody>
-                        <tr id="total_amount">
+                        <tr id="total_amount" class="bills-amount">
                             <td style="border-right: none;"></td>
-                            <td style="border-left: none;">In Word:Two thousand Five Hundred taka only</td>
-                            <td style="border-right: none;"><input name="total_amount" type="number" value="25"></td>
+                            <td style="border-left: none;">Payable Amount :</td>
+                            <td style="border-right: none;"><input name="total_amount" type="number" value="5000"></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                         <tr id="paid_amount" class="bills-amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">Paid Amount :</td>
+                            <td style="border-right: none;"><input name="paid_amount" type="number" value="5000"></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                        <tr id="due_amount" class="bills-amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">Due Amount :</td>
+                            <td style="border-right: none;"><input name="due_amount" type="number" value="5000"></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                    </table>
+                       
+                        <button id="add_row">
+                            Add Row
+                        </button>
+                    
+                <input style="margin-top: 20px" type="submit" value="Submit">
+            
+        </form>
+
+       <!-- opinion_form -->
+        <form data-form id="opinion_form"  class="bill-form" action="./b.html">
+        <h3>Opinion Bill Form</h3>
+            <main>
+                  
+                <div>
+                    <label>Date:</label>
+                    <input type="date" name="date">
+                </div>
+                <div>
+                    <label>Ref: </label>
+                    <input type="text" placeholder="PBL/Reazuddin Bazar/2026/5153"  name="ref">
+                </div>
+                <div>
+                    <label>Bank Name:</label>
+                    <!-- <input type="text" placeholder="Bank Name" name="bank"> -->
+                    <select name="bank" id="" form="">
+                        <option selected value="Pubali Bank PLC">Pubali Bank PLC</option>
+                        <option value="NCC Bank">NCC Bank</option>
+                        <option value="Sonali Bank">Sonali Bank</option>
+                        <option value="Islami Bank">Islami Bank</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Branch Name:</label>
+                    <!-- <input type="text" placeholder="Branch Name" name="branch"> -->
+                     <select name="branch" id="" form="">
+                        <option selected value="CDA Branch">CDA Branch</option>
+                        <option value="Chawkbazar Branch">Chawkbazar Branch</option>
+                        <option value="Bahadderhat Branch">Bahadderhat Branch</option>
+                        <option value="Mehedibag Branch">Mehedibag Branch</option>
+                    </select>
+                </div>
+                <div>
+                    <label>A/C Name:</label>
+                    <input type="text" placeholder="Sifat Ullah"  name="acc_name">
+                </div>
+                <!-- <div>
+                    <labelfor="amount">Amount:</label>
+                    <input type="number"  name="amount">
+                </div> -->
+
+                </main>   
+                    <h3 style="text-align: center;color:#1ccc7b;margin-top: 20px">Services</h3>
+                    <table id="opinion_form_table" style="width: 100%; margin-top:6px;">
+                        <thead>
+                            <tr>
+                                <th>SL</th>
+                                <th>Description</th>
+                                <th style="width: 15%">Amount(Taka)</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            <tr>
+                                <td>1</td>
+                                <td><input name="opinion_title" type="text" value="Opinion Bill"></td>
+                                <td><input name="opinion_amount" type="number" value="5000"></td>
+                                <td><button>Delete</button></td>
+                            </tr>
+                        </tbody>
+
+                        <!-- Bill Calculation -->
+                        <tr></tr>
+                        <tr id="total_amount" class="bills-amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">Payable Amount : </td>
+                            <td style="border-right: none;"><input name="total_amount" type="number" value="5000" readonly></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                         <tr id="paid_amount" class="bills-amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">Paid Amount : </td>
+                            <td style="border-right: none;"><input name="paid_amount" type="number" value="5000"></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                        <tr id="due_amount" class="bills-amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">Due Amount : </td>
+                            <td style="border-right: none;"><input name="due_amount" type="number" value="5000" readonly></td>
                             <td style="border-left: none;"></td>
                         </tr>
                     </table>
@@ -174,6 +203,7 @@
                 <input style="margin-top: 20px" type="submit" value="Submit">
             
         </form>
+        
         <!-- mortgage_form -->
         <form data-form id="mortgage_form"  class="bill-form" action="./b.html">
  <h3>Mortgage Bill Form</h3>
@@ -290,10 +320,24 @@
                             </tr>
                             
                         </tbody>
-                        <tr id="total_amount">
+                         <!-- Bill Calculation -->
+                        <tr></tr>
+                        <tr id="total_amount" class="bills-amount">
                             <td style="border-right: none;"></td>
-                            <td style="border-left: none;">In Word: thousand taka only</td>
-                            <td style="border-right: none;"><input name="total_amount" type="number" value="5000"></td>
+                            <td style="border-left: none;">Payable Amount :</td>
+                            <td style="border-right: none;"><input name="total_amount" type="number" value="5000" readonly></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                         <tr id="paid_amount" class="bills-amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">Paid Amount :</td>
+                            <td style="border-right: none;"><input name="paid_amount" type="number" value="5000"></td>
+                            <td style="border-left: none;"></td>
+                        </tr>
+                        <tr id="due_amount" class="bills-amount">
+                            <td style="border-right: none;"></td>
+                            <td style="border-left: none;">Due Amount :</td>
+                            <td style="border-right: none;"><input name="due_amount" type="number" value="5000" readonly></td>
                             <td style="border-left: none;"></td>
                         </tr>
                     </table>
@@ -318,7 +362,7 @@
         </div>
     </div>
 
-
+    <!-- WARNING MESSAGE -->
 
     <script src="./assets/script.js"></script>
 </body>

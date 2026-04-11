@@ -2,7 +2,7 @@
 // ACTIVE BILL NAME BUTTON & SHOW ACTIVE BILL FORM
 const buttons = document.querySelectorAll('[data-target]');
 const billForms = document.querySelectorAll('[data-form]');
-const tBody = document.querySelectorAll('.bill-form table tbody');    
+const tBody = document.querySelectorAll('.bill-form table .tbody');    
 const addRowBtn = document.querySelectorAll('.bill-form #add_row');     // Add row in mortgage form btn
     
 // ACTIVE INACTIVE BUTTON & TABS
@@ -77,22 +77,43 @@ const addRowBtn = document.querySelectorAll('.bill-form #add_row');     // Add r
     const totalAmount = function (tbody = document.querySelector('.tbody')) {
         const billAmountFields = tbody.querySelectorAll('input[type="number"]');
         const totalAmount = tbody.closest('table').querySelector('#total_amount input');
+        const paidAmount = tbody.closest('form').querySelector('#paid_amount input');
+        const dueAmount = tbody.closest('form').querySelector('#due_amount input');
+
         let totalCount = 0;
         billAmountFields.forEach(b => {
             totalCount += parseInt(b.value, 10) || 0;
         })
-        totalAmount.value = totalCount
+        totalAmount.value = totalCount;
+        paidAmount.value = totalAmount.value;
+        dueAmount.value = totalAmount.value - paidAmount.value;
     }
     totalAmount()   //initial total amount count
 
-    // RE-COUNT TOTAL BILL AFTER ADD ROW
+    // RE-COUNT TOTAL BILL AFTER ADD/DELETE ROW
     tBody.forEach(tbd => {
         tbd.addEventListener('input', (e) => {
             if(e.target.matches("input[type='number']")) {
                 totalAmount(tbd)
-                console.log(e.target.value);
-                
+                // console.log(e.target.value);              
             }
+        })
+    })
+
+    // Due Calculation onchange of payamount value manually
+
+    document.querySelectorAll('#paid_amount input').forEach(pamnt => {
+        pamnt.addEventListener('blur', (e) => {
+            let total = pamnt.closest('form').querySelector('#total_amount input').value;
+            let paidAmount = pamnt.value;
+            let dueAmount = pamnt.closest('form').querySelector('#due_amount input');
+
+            if(total >= paidAmount) {
+                dueAmount.value = total - paidAmount;
+            }else {
+                alert('paid amount can not be larger than total amount')
+            }
+
         })
     })
 

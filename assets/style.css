@@ -83,12 +83,26 @@
     flex-grow: 1;
 }
 
-#bill_form_container .bill-form table, .bill-form th,.bill-form td{
+#bill_form_container .bill-form table,
+ .bill-form th,
+ .bill-form td{
     border: 1px solid #c5e9d8;
     border-collapse: collapse;
     text-align: left;
     font-size: 20px;
     padding: 4px;
+}
+
+.bill-form tbody td {
+    padding: 0;
+}
+.bill-form tbody td:last-child {
+    padding: 0 6px;
+}
+
+.bill-form tbody td:first-child,
+.bill-form th {
+    text-align: center;
 }
 
 #bill_form_container .bill-form table tbody tr:nth-child(odd),
@@ -103,11 +117,16 @@
     display: block;
     outline: none;
     border: none;
-    padding: 0 5px
+    padding: 4px 5px
 }
 
 #bill_form_container .bill-form table input:focus {
-    outline: #1ccc7b;
+    outline: none;
+    border: 1px solid #1ccc7b;
+    /* box-shadow: 1px 0px 4px #201f58; */
+    /* box-shadow: 1px 0px 7px #3bc2a5; */
+   /* opacity: 0; */
+   /* background-color: #e7f9f6 */
 }
 
 #bill_form_container .bill-form table button {
@@ -119,11 +138,25 @@
     border-radius: 3px;
     cursor: pointer;
 }
-#bill_form_container .bill-form table #total_amount td:nth-child(2) {
+#bill_form_container .bill-form table button:hover {
+    background-color: #179259;
+    transition: .3s
+}
+/* #bill_form_container .bill-form table #total_amount td:nth-child(2) {
     font-weight: bold;
 }
 #bill_form_container .bill-form table #total_amount td:nth-child(3) input {
     font-weight: bold;
+} */
+ .bills-amount td:nth-child(2) {
+    text-align: right;
+    padding-right: 6px;
+ }
+.bills-amount td:nth-child(2),
+.bills-amount td:nth-child(3) input {
+    font-weight: bold;
+    font-size: 17px;
+
 }
 #bill_form_container .bill-form #add_row {
     background-color: #f1f1f1;
@@ -172,13 +205,15 @@
 }
 
 #bill_form_container .bill-form div input:focus {
-    border: 1px solid #3bc2a5;
+    /* border: 1px solid #faf750; */
+    box-shadow: 1px 0px 7px #3bc2a5;
     outline: none;
     padding-bottom: 13px;
     transition: .5s ease
 }
 #bill_form_container .bill-form div select:focus {
     outline: none;
+    box-shadow: 1px 0px 7px #3bc2a5;
 }
 #bill_form_container .bill-form input[type='submit'] {
     background-color: #1ccc7b;
